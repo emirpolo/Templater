@@ -30,7 +30,9 @@ result = new Templater({
 print(template, text, result);
 
 // Test 2. custon Toke: [[]]
-template = 'Sr. [[user]] se le ha consignado $[[amount]] COP - Fecha: [[date]]';
+template =
+  '[[userName]] se le ha consignado [[amount]] - Fecha: [[paymentDate]]';
+text = 'Sr. Jhon Snow se le ha consignado $100,000.00 COP - Fecha: 31/08/2023';
 
 result = new Templater({
   tokenStart: '[[',
